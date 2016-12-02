@@ -15,6 +15,8 @@
   * [cs academy](https://csacademy.com/user/koyumeishi)
 
 ## Products
+  * [AtCoder Rating Graph Comparison](http://atcoderratinggraphcomparison.appspot.com/)  
+    AtCoder のレーティング遷移を比較します
   * [AtCoderCustomStandings](https://github.com/koyumeishi/atcoder_script#AtCoderCustomStandings)  
     AtCoder の順位表に機能を追加する user script です
   * [AtCoderModalMoudarui ](https://github.com/koyumeishi/atcoder_script#AtCoderModalMoudarui)  
