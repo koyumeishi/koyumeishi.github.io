@@ -1,0 +1,33 @@
+<html>
+<head>
+<script>
+dict = {"あ":"a","い":"i","う":"u","え":"e","お":"o","か":"ka","き":"ki","く":"ku","け":"ke","こ":"ko","きゃ":"kya","きゅ":"kyu","きょ":"kyo","さ":"sa","し":"si","す":"su","せ":"se","そ":"so","しゃ":"sya","しゅ":"syu","しょ":"syo","た":"ta","ち":"ti","つ":"tu","て":"te","と":"to","ちゃ":"tya","ちゅ":"tyu","ちょ":"tyo","な":"na","に":"ni","ぬ":"nu","ね":"ne","の":"no","にゃ":"nya","にゅ":"nyu","にょ":"nyo","は":"ha","ひ":"hi","ふ":"hu","へ":"he","ほ":"ho","ひゃ":"hya","ひゅ":"hyu","ひょ":"hyo","ま":"ma","み":"mi","む":"mu","め":"me","も":"mo","みゃ":"mya","みゅ":"myu","みょ":"myo","や":"ya","ゆ":"yu","よ":"yo","ら":"ra","り":"ri","る":"ru","れ":"re","ろ":"ro","りゃ":"rya","りゅ":"ryu","りょ":"ryo","わ":"wa","ゐ":"wi","ゑ":"we","を":"wo","が":"ga","ぎ":"gi","ぐ":"gu","げ":"ge","ご":"go","ぎゃ":"gya","ぎゅ":"gyu","ぎょ":"gyo","ざ":"za","じ":"zi","ず":"zu","ぜ":"ze","ぞ":"zo","じゃ":"zya","じゅ":"zyu","じょ":"zyo","だ":"da","ぢ":"di","づ":"du","で":"de","ど":"do","ぢゃ":"dya","ぢゅ":"dyu","ぢょ":"dyo","ば":"ba","び":"bi","ぶ":"bu","べ":"be","ぼ":"bo","びゃ":"bya","びゅ":"byu","びょ":"byo","ぱ":"pa","ぴ":"pi","ぷ":"pu","ぺ":"pe","ぽ":"po","ぴゃ":"pya","ぴゅ":"pyu","ぴょ":"pyo","くゎ":"kwa","ぐゎ":"gwa","ん":"nn","っ":"ltu","ー":"-"};
+
+function convert(txt){
+  let res = "";
+  for(let i=0; i<txt.length; i++){
+    if(txt.length - i >= 2 && txt.substr(i,2) in dict ){
+      res += dict[txt.substr(i,2)];
+      i++;
+    }else if(txt[i] in dict){
+      res += dict[txt[i]];
+    }else{
+      res += txt[i];
+    }
+  }
+  return res;
+}
+
+document.getElementById("input").onchange = function(){
+  console.log("hoge");
+  document.getElementById("output").setAttribute("value", convert( this ));
+}(this);
+</script>
+</head>
+<body>
+<p>ひらがなを入力するとローマ字に変換します。 <a href="https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E5%BC%8F%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97">https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E5%BC%8F%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97</a></p>
+<div>
+input <input type="textarea" id="input"/ onChange="document.getElementById('output').setAttribute('value', convert( document.getElementById('input').value))">
+output <input type="textarea" id="output"/>
+</div>
+</body>
