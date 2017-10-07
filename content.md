@@ -15,10 +15,14 @@
   * [cs academy](https://csacademy.com/user/koyumeishi)
 
 ## Products
+  * [AtCoder Stats](https://atcoderstats.appspot.com/)  
+    AtCoder のコンテストの統計情報です。 [AtCoderCustomStandings](https://github.com/koyumeishi/atcoder_script#AtCoderCustomStandings) の機能を切り出したものです  
   * [AtCoder Rating Graph Comparison](http://atcoderratinggraphcomparison.appspot.com/)  
     AtCoder のレーティング遷移を比較します
   * [AtCoderCustomStandings](https://github.com/koyumeishi/atcoder_script#AtCoderCustomStandings)  
-    AtCoder の順位表に機能を追加する user script です
+    AtCoder の順位表に機能を追加する user script です  
+    beta.atcoder.jp への対応予定はありません。 求められていたであろう機能の多くが beta の方で実装されているためです。 
+    統計機能は [AtCoder Stats](https://atcoderstats.appspot.com/) で利用可能です
   * [AtCoderModalMoudarui ](https://github.com/koyumeishi/atcoder_script#AtCoderModalMoudarui)  
     AtCoder でコンテスト開始/終了時に表示されるモーダルを非表示にする user script です
   * [tweet atcoder rating](https://gist.github.com/koyumeishi/fe100716f1b3a59492acc01ed74416f6)  
